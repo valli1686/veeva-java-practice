@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class FinallyDemo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            int value = Integer.parseInt(sc.next());
+            System.out.println("Parsed value: " + value);
+
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number");
+
+        } finally {
+            System.out.println("Cleanup completed");
+        }
+    }
+}
